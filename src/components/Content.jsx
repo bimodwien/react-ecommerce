@@ -17,7 +17,9 @@ const Content = () => {
     <>
         <div>Content</div>
         {dataFetch.map((data) => {
-            return <div>{data.title}</div>
+            return <div>
+                {data.title}
+            </div>
         })}
     </>
   )
