@@ -1,5 +1,6 @@
 import React from 'react'
 import useFetch from '../helper/hooks/index'
+import './content.css'
 
 const Content = () => {
     const dataFetch = useFetch({
@@ -7,15 +8,13 @@ const Content = () => {
         defaultData : [],
     });
 
-    console.log('<><><><><><><><><><><>',dataFetch);
-
-    //pertanyaan buat nanti malam:
-    //kenapa defaultData nya array
-    //lupa alesannya kenapa harus direturn
-
   return (
     <>
-        <div>Content</div>
+        <div className='content-banner'>
+            <div className='content-title'>Grab up to 50% off on selected items</div>
+            <div className='content-image'>gambar</div>
+        </div>
+
         {dataFetch.map((data) => {
             return <div>
                 {data.title}

@@ -17,6 +17,7 @@ function useFetch(parameter) {
                 console.log(`ada error`, error);
             })
     };
+    
     // console.log('ini adalah hasil',result);
     useEffect(() => {
         fetchProduct();
