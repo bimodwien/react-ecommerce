@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <div className='navbar-utama'>
         <div className='navbar-support'>Support +62 1123 456</div>
-        <div className='navbar-title'>FakeCommerce</div>
+        <div className='navbar-title'>NiceCommerce</div>
         <div className='navbar-icons'>
           <div>1</div>
           <div>2</div>
