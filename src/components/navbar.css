@@ -1,0 +1,21 @@
+.navbar-utama {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 50px;
+    padding: 5px 30px;
+    color: #9EB384;
+}
+
+.navbar-title {
+    font-size: 28px;
+    padding-left: 180px;
+    font-weight: 400;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 7.5px;
+    padding-left: 120px;
+}
