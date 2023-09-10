@@ -15,6 +15,8 @@ const Content = () => {
             <div className='content-image'>gambar</div>
         </div>
 
+        <h4>Our Categories</h4>
+
         {dataFetch.map((data) => {
             return <div>
                 {data.title}

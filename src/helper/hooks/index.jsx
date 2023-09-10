@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 
 function useFetch(parameter) {
     const {url, config = {}, defaultData, depedencyArray = []} = parameter;
@@ -10,7 +10,6 @@ function useFetch(parameter) {
                 return response.json();
             })
             .then((data) => {
-                // console.log('ini dataaaa',data);
                 setResult(data);
             })
             .catch((error) => {
@@ -18,7 +17,6 @@ function useFetch(parameter) {
             })
     };
     
-    // console.log('ini adalah hasil',result);
     useEffect(() => {
         fetchProduct();
     },[url, ...depedencyArray]);
