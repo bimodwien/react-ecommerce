@@ -21,3 +21,52 @@
     height: 100%;
     background-color: #435334;
 }
+
+.content-menu {
+    display: flex;
+    padding: 100px 0 30px 30px;
+    gap: 420px;
+    align-items: center;
+}
+
+.content-categories {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content-button {
+    display: flex;
+    gap: 20px;
+}
+
+.content-button > button {
+    background-color: #9EB384;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #9EB384;
+    cursor: pointer;
+    color: #F1F1F1;
+}
+
+.content-field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 25px;
+}
+
+.content-cards{
+    height: 400px;
+    width: 350px;
+    background-color: #FFFFFF;
+}
+
+.content-cards > img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
