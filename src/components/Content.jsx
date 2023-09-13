@@ -21,13 +21,14 @@ const Content = () => {
                 <button>Jewelery</button>
                 <button>Men's Clothing</button>
                 <button>Women's Clothing</button>
-
             </div>
         </div>
         <div className='content-field'>
             {dataFetch.map((data) => {
-                return <div className='content-cards'>
-                    <img src={data.image} alt="" />
+                return <div key={data.id} className='content-cards'>
+                    <div className='content-cards-image'>
+                        <img src={data.image} alt="" />
+                    </div>
                     <div>{data.title}</div>
                     <div>{data.rating.rate}</div>
                     <div>{data.price}</div>

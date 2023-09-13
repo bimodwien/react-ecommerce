@@ -62,11 +62,13 @@
     background-color: #FFFFFF;
 }
 
-.content-cards > img {
-    height: 200px;
-    width: 200px;
+.content-cards-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.content-cards-image > img {
+    height: 200px;
+    width: 200px;
 }
