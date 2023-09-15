@@ -29,12 +29,12 @@ const Content = () => {
                     <div className='content-cards-image'>
                         <img src={data.image} alt="" />
                     </div>
-                    <div>{data.title}</div>
-                    <div>{data.rating.rate}</div>
-                    <div>{data.price}</div>
-                    <div>
-                        <button>Add to Favorite</button>
-                        <button>Add to Chart</button>
+                    <div className='content-cards-title'>{data.title}</div>
+                    <div className='content-cards-rating'>{data.rating.rate}</div>
+                    <div className='content-cards-price'>{data.price}</div>
+                    <div className='content-cards-button'>
+                        <button className='content-cards-fav'>Add to Favorite</button>
+                        <button className='content-cards-chart'>Add to Chart</button>
                     </div>
                 </div>
             })}

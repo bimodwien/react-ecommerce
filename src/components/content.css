@@ -52,23 +52,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 30px;
     gap: 25px;
 }
 
 .content-cards{
     height: 400px;
-    width: 350px;
-    background-color: #FFFFFF;
+    width: 275px;
+    background-color: #F1EFEF;
 }
 
 .content-cards-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFFFFF;
 }
 
 .content-cards-image > img {
     height: 200px;
     width: 200px;
+    background-color: #FFFFFF;
 }
