@@ -58,9 +58,11 @@
 }
 
 .content-cards{
-    height: 400px;
+    height: 420px;
     width: 275px;
     background-color: #F1EFEF;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px gray;
 }
 
 .content-cards-image {
@@ -74,4 +76,55 @@
     height: 200px;
     width: 200px;
     background-color: #FFFFFF;
+}
+
+.content-cards-title {
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.content-cards-rating {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #FFCC70;
+}
+
+.content-cards-price {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.content-cards-button {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 7px;
+}
+
+.content-cards-fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: #C70039;
+    color: #F1EFEF;
+    border: 1px solid #C70039;
+    border-radius: 5px;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.content-cards-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: #435334;
+    border: 1px solid #435334;
+    border-radius: 5px;
+    gap: 3px;
+    color: #F1EFEF;
+    cursor: pointer;
 }

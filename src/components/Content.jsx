@@ -1,6 +1,8 @@
 import React from 'react'
 import useFetch from '../helper/hooks/index'
 import './content.css'
+import { IoCartOutline } from 'react-icons/io5'
+import { BsHeartFill } from 'react-icons/bs'
 
 const Content = () => {
     const dataFetch = useFetch({
@@ -31,10 +33,10 @@ const Content = () => {
                     </div>
                     <div className='content-cards-title'>{data.title}</div>
                     <div className='content-cards-rating'>{data.rating.rate}</div>
-                    <div className='content-cards-price'>{data.price}</div>
+                    <div className='content-cards-price'>${data.price}</div>
                     <div className='content-cards-button'>
-                        <button className='content-cards-fav'>Add to Favorite</button>
-                        <button className='content-cards-chart'>Add to Chart</button>
+                        <button className='content-cards-fav'> <BsHeartFill/> Add to Favorite</button>
+                        <button className='content-cards-cart'> <IoCartOutline/> Add to Cart</button>
                     </div>
                 </div>
             })}
