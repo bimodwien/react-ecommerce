@@ -16,6 +16,24 @@
 
 .navbar-icons {
     display: flex;
-    gap: 7.5px;
-    padding-left: 120px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 300px;
+}
+
+.navbar-icons-search {
+    cursor: pointer;
+}
+
+.navbar-icons-cart {
+    cursor: pointer;
+}
+
+.navbar-login {
+    padding: 5px 20px;
+    background-color: #9EB384;
+    color: #FFFFFF;
+    border: 1px solid #9EB384;
+    border-radius: 5px;
 }
