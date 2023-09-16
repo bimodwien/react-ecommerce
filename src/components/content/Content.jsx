@@ -1,6 +1,6 @@
 import React from 'react'
-import useFetch from '../helper/hooks/index'
-import './content.css'
+import useFetch from '../../helper/hooks/index'
+import '../content/content.css'
 import { IoCartOutline } from 'react-icons/io5'
 import { BsHeartFill } from 'react-icons/bs'
 
