@@ -1,0 +1,44 @@
+.footer-utama {
+    background-color: #AEC3AE;
+    padding: 30px 30px;
+}
+
+.footer-newsletter {
+    height: 100px;
+    background-color: #F2F2F2;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 25vh;
+}
+
+.footer-newsletter-letter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-newsletter-subscribed {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.footer-newsletter-inform {
+    font-size: 14px;
+}
+
+.footer-form-input {
+    padding: 15px 15px;
+    width: 200px;
+    border: 1px solid #F2F2F2;
+}
+
+.footer-form-button {
+    padding: 15px 20px;
+    border: 1px solid #F2F2F2;
+    background-color: #C70039;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
