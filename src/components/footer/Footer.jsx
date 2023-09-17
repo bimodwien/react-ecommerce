@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className='footer-information-about'>Address: Jakarta Selatan, 12220</div>
                     <div className='footer-information-about'>Phone: +62 812 8252 5002</div>
                     <div className='footer-information-about'>Email: bimodwien2@gmail.com </div>
-                    <div className='footer-information-about'>Web: bimoprabowo.com</div>
+                    <div className='footer-information-about'>Web: linkedin.com/bimodwien</div>
                     <div className='footer-information-about'>Get in Touch</div>
                     <div className='footer-brand-icons'>
                         <div className='footer-brand-icons-button'><FaFacebook/></div>
