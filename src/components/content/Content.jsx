@@ -2,13 +2,24 @@ import React from 'react'
 import useFetch from '../../helper/hooks/index'
 import '../content/content.css'
 import { IoCartOutline } from 'react-icons/io5'
-import { BsHeartFill } from 'react-icons/bs'
+import { BsHeartFill, BsHeart } from 'react-icons/bs'
 
 const Content = () => {
-    const dataFetch = useFetch({
+    const {result: dataFetch, setResult: favHeart} = useFetch({
         url : `https://fakestoreapi.com/products`,
         defaultData : [],
     });
+
+    let isFav = false;
+    function handleLike(id) {
+        const fillFavorite = dataFetch.map((data) => {
+            if (data.id === id){
+                return {...data, isFav: !data.isFav}
+            };
+            return data;
+        })
+        favHeart(fillFavorite);
+    }
 
   return (
     <>
@@ -31,13 +42,13 @@ const Content = () => {
                     <div className='content-cards-image'>
                         <img src={data.image} alt="" />
                     </div>
+                    <button className='content-cards-fav' onClick={() => handleLike(data.id)}>{isFav ? <BsHeartFill/> : <BsHeart/>}</button>
                     <div className='content-cards-title'>{data.title}</div>
                     <div className='content-cards-rating'>{data.rating.rate}</div>
-                    <div className='content-cards-price'>${data.price}</div>
+                    <div className='content-cards-price'>${data.price}</div>      
                     <div className='content-cards-button'>
-                        <button className='content-cards-fav'> <BsHeartFill/> Add to Favorite</button>
-                        <button className='content-cards-cart'> <IoCartOutline/> Add to Cart</button>
-                    </div>
+                        <button className='content-cards-cart'> <IoCartOutline/> Add to Cart</button>                
+                    </div>         
                 </div>
             })}
         </div>

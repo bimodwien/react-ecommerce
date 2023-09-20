@@ -21,7 +21,7 @@ function useFetch(parameter) {
         fetchProduct();
     },[url, ...depedencyArray]);
 
-    return result;
+    return {setResult, result};
 }
 
 export default useFetch;

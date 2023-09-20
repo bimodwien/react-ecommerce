@@ -64,6 +64,22 @@
     box-shadow: 0.5px 0.5px gray;
     border: 1px solid #FAF1E4;
     border-radius: 5px;
+    position: relative;
+}
+
+.content-cards-fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    background-color: #7D7C7C;
+    color: #C70039;
+    border: 5px solid #F1EFEF;
+    border-radius: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
 }
 
 .content-cards-image {
@@ -99,24 +115,7 @@
 }
 
 .content-cards-button {
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    gap: 7px;
-}
-
-.content-cards-fav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px;
-    background-color: #C70039;
-    color: #F1EFEF;
-    border: 1px solid #C70039;
-    border-radius: 5px;
-    gap: 3px;
-    cursor: pointer;
+    padding-left: 10px;
 }
 
 .content-cards-cart {
@@ -127,7 +126,6 @@
     background-color: #435334;
     border: 1px solid #435334;
     border-radius: 5px;
-    gap: 3px;
     color: #F1EFEF;
     cursor: pointer;
 }
