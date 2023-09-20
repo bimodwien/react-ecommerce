@@ -71,10 +71,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 7px;
-    background-color: #7D7C7C;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #EEE0C9;
     color: #C70039;
-    border: 5px solid #F1EFEF;
+    border: 5px solid #7D7C7C;
     border-radius: 50px;
     cursor: pointer;
     position: absolute;
@@ -92,29 +93,40 @@
 }
 
 .content-cards-image > img {
-    height: 200px;
+    height: 220px;
     width: 200px;
     background-color: #FFFFFF;
 }
 
+.content-cards-wrapping {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
 .content-cards-title {
-    padding: 10px 10px;
     font-size: 16px;
     font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .content-cards-rating {
-    padding: 10px 10px;
     font-size: 16px;
     color: #FFCC70;
 }
 
 .content-cards-price {
-    padding: 5px 10px;
     font-size: 14px;
 }
 
 .content-cards-button {
+    padding-top: 30px;
     padding-left: 10px;
 }
 
