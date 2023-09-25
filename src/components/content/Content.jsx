@@ -17,7 +17,7 @@ const Content = () => {
                         return item.id !== id;
                     })
                 }
-                const actualData = [...rawDataFav ]
+                const actualData = [...rawDataFav]
                 if(!isFav) {
                     actualData.push({...data, isFav: true})
                 }
