@@ -13,6 +13,7 @@ const Content = () => {
     function handleLike(id) {
         const fillFavorite = dataFetch.map((data) => {
             if (data.id === id){
+                localStorage.setItem('fav', JSON.stringify(data));
                 return {...data, isFav: !data.isFav}
             };
             return data;

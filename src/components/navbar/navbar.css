@@ -12,6 +12,8 @@
     font-size: 28px;
     padding-left: 180px;
     font-weight: 400;
+    text-decoration: none;
+    color: #435334;
 }
 
 .navbar-icons {
@@ -24,6 +26,8 @@
 
 .navbar-icons-search {
     cursor: pointer;
+    text-decoration: none;
+    color: #435334;
 }
 
 .navbar-icons-cart {
