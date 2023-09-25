@@ -10,7 +10,6 @@ const Content = () => {
         defaultData : [],
     });
 
-    let isFav = false;
     function handleLike(id) {
         const fillFavorite = dataFetch.map((data) => {
             if (data.id === id){
@@ -42,7 +41,7 @@ const Content = () => {
                     <div className='content-cards-image'>
                         <img src={data.image} alt="" />
                     </div>
-                    <button className='content-cards-fav' onClick={() => handleLike(data.id)}>{isFav ? <BsHeartFill/> : <BsHeart/>}</button>
+                    <button className='content-cards-fav' onClick={() => handleLike(data.id)}>{data.isFav ? <BsHeartFill/> : <BsHeart/>}</button>
                     <div className='content-cards-wrapping'>
                         <div className='content-cards-title'>{data.title}</div>
                         <div className='content-cards-rating'>{data.rating.rate}</div>
