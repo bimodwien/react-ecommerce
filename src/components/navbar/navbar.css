@@ -32,6 +32,8 @@
 
 .navbar-icons-cart {
     cursor: pointer;
+    text-decoration: none;
+    color: #435334;
 }
 
 .navbar-login {

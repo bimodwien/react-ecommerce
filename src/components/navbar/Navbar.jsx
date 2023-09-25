@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link to={"/"} className='navbar-title'>NiceCommerce</Link>
         <div className='navbar-icons'>
           <Link to={"/favorite"} className='navbar-icons-search'><BsHeartFill/></Link>
-          <div className='navbar-icons-cart'><FaCartShopping/></div>
+          <Link to={"/cart"} className='navbar-icons-cart'><FaCartShopping/></Link>
         </div>
         <button className='navbar-login'>Login</button>
       </div>    

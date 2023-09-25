@@ -1,24 +1,53 @@
 import React from 'react'
-import useFetch from '../../helper/hooks/index'
+import { useProduct } from '../../helper/hooks'
 import '../content/content.css'
 import { IoCartOutline } from 'react-icons/io5'
 import { BsHeartFill, BsHeart } from 'react-icons/bs'
 
 const Content = () => {
-    const {result: dataFetch, setResult: favHeart} = useFetch({
-        url : `https://fakestoreapi.com/products`,
-        defaultData : [],
-    });
 
-    function handleLike(id) {
+    const {dataFetch, setFetch} = useProduct()
+
+    function handleLike({id, isFav}) {
         const fillFavorite = dataFetch.map((data) => {
-            if (data.id === id){
-                localStorage.setItem('fav', JSON.stringify(data));
+            if (data.id === id){         
+                let rawDataFav = JSON.parse(localStorage.getItem('fav')) || []
+                if(isFav) {
+                    rawDataFav = rawDataFav.filter((item) => {
+                        return item.id !== id;
+                    })
+                }
+                const actualData = [...rawDataFav ]
+                if(!isFav) {
+                    actualData.push({...data, isFav: true})
+                }
+                localStorage.setItem('fav', JSON.stringify(actualData));
                 return {...data, isFav: !data.isFav}
             };
             return data;
         })
-        favHeart(fillFavorite);
+        setFetch(fillFavorite);
+    }
+
+    function handleCart(id) {
+        const data = dataFetch.find((product) =>{
+            return product.id === id
+        })
+        let isData = false
+        const newCartData = {...data, qty:1}
+        const rawDataCart = (JSON.parse(localStorage.getItem('cart')) || []).map((cartData) => {
+            if (cartData.id === id) {
+                isData = true
+                return {...cartData, qty: cartData.qty + 1}
+            }
+            return cartData;
+        });
+        const actualCart = [...rawDataCart]
+        if (!isData) {
+            actualCart.push(newCartData);
+        }
+        localStorage.setItem('cart', JSON.stringify(actualCart))
+        alert('Berhasil ditambah ke Cart')
     }
 
   return (
@@ -42,14 +71,14 @@ const Content = () => {
                     <div className='content-cards-image'>
                         <img src={data.image} alt="" />
                     </div>
-                    <button className='content-cards-fav' onClick={() => handleLike(data.id)}>{data.isFav ? <BsHeartFill/> : <BsHeart/>}</button>
+                    <button className='content-cards-fav' onClick={() => handleLike(data)}>{data.isFav ? <BsHeartFill/> : <BsHeart/>}</button>
                     <div className='content-cards-wrapping'>
                         <div className='content-cards-title'>{data.title}</div>
                         <div className='content-cards-rating'>{data.rating.rate}</div>
                         <div className='content-cards-price'>${data.price}</div>      
                     </div>
                     <div className='content-cards-button'>
-                        <button className='content-cards-cart'> <IoCartOutline/> Add to Cart</button>                
+                        <button className='content-cards-cart' onClick={() => handleCart(data.id)}> <IoCartOutline/> Add to Cart</button>                
                     </div>         
                 </div>
             })}

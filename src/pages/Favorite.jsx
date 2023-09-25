@@ -7,25 +7,31 @@ const Favorite = () => {
 
     const favData = JSON.parse(localStorage.getItem('fav')) || []
 
-  return (
+    return (
     <>
         <Navbar/>
         <div className='favorite-content'>
             <h3>Our Wishlist</h3>
             <div className='favorite-field'>
-                <div className='favorite-card'>
-                    <div>
-                        <img src={favData.image} alt="" />
-                    </div>
-                    <div>
-                        <div>{favData.title}</div>
-                        <div>{favData.rating.rate}</div>
-                        <div>{favData.price}</div>
-                    </div>
-                    <div>
-                        <button><IoCartOutline/> Add to Cart</button>
-                    </div>
-                </div>    
+                {favData.map((data) => {
+                return (
+                    <div className='favorite-card'>
+                        <div>
+                            <img src={data.image} alt="" />
+                        </div>
+                        <div>
+                            <div>{data.title}</div>
+                            <div>{data.rating.rate}</div>
+                            <div>{data.price}</div>
+                        </div>
+                        <div>
+                            <button><IoCartOutline/> Add to Cart</button>
+                            <button>delete</button>
+                        </div>
+                    </div> 
+                )   
+                    
+                })}
             </div>        
         </div>
         
